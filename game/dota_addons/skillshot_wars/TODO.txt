@@ -1,0 +1,5 @@
+TODO:
+
+-Limit items purchasable.
+-Manage gold output.
+-Decrease rune spawnrate.

@@ -1,0 +1,1275 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Ability: Pudge Meat Hook
+	//=================================================================================================================
+	"pudge_meat_hook"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1300"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"7"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"100"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hook_speed"			"1600.0"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_width"		"100"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_distance"		"1300"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"vision_radius"		"500"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"vision_duration"	"4.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Ability: Mirana Arrow
+	//=================================================================================================================
+	"mirana_arrow"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"9000"
+		"AbilityCastPoint"				"0.5"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10.0"
+		"AbilityDuration"				"3.11"		//3.11
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"160"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"arrow_speed"		"857.0"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"arrow_width"		"115"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"arrow_range"		"9000"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"arrow_max_stunrange"	"1500"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"arrow_min_stun"	"0.01"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"arrow_max_stun"	"5.0"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"arrow_bonus_damage"	"140"
+			}
+			"08"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"arrow_vision"	"650"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Rattletrap: Hookshot
+	//=================================================================================================================
+	"rattletrap_hookshot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastRange"				"3000"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"latch_radius"		"125"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stun_radius"		"175"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"2.0"
+			}
+			
+			"04"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"6000"
+			}
+			"05"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"tooltip_range"		"3000"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"200"
+			}
+			"07"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"cooldown_scepter"	"10"
+			}
+		}
+	}
+	//ITEM CLEARING
+	"item_ward_observer"
+	{
+		"SecretShop"					"1"	
+	}
+	"item_ward_sentry"
+	{
+		"SecretShop"					"1"	
+	}
+	"item_smoke_of_deceit"
+	{
+		"SecretShop"					"1"	
+	}
+	"item_flask"
+	{
+		"SecretShop"					"1"	
+	}
+	"item_boots"
+	{
+		"SecretShop"					"1"	
+	}
+	"item_blink"
+	{
+		"ItemCost"						"1500"
+		"SecretShop"					"1"	
+	}
+	"item_manta"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1147"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"35.0"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"ItemPurchasable"				"1"
+		"ItemCost"						"1500"
+		"SecretShop"					"1"	
+		"ItemShopTags"					"agi;str;int;attack_speed;move_speed;hard_to_tag"
+		"ItemQuality"					"component"
+		"ItemAliases"					"manta style"
+		"ItemDisassembleRule"			""
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"			"CASTER"
+				"ModifierName"		"modifier_item_manta_style"
+			}
+		}
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"	"0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_count"			"2"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_do_damage_percent_melee"	"-67"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_take_damage_percent_melee"	"250"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_do_damage_percent_ranged"	"-72"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_take_damage_percent_ranged"	"300"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cooldown_melee"		"35.0"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cooldown_melee"		"35.0"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"invuln_duration"		"0.1"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_radius"			"1000"
+			}
+			"15"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_outgoing_melee"			"33"
+			}
+			"16"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_outgoing_range"			"28"
+			}
+		}
+	}
+	"item_recipe_manta"
+	{
+		"ItemRecipe"					"1"
+		"ItemCost"						"1500"
+		"SecretShop"					"1"	
+		"ItemRequirements"
+		{
+			"01"						"item_dummy"
+		}
+	}
+	"item_shadow_amulet"
+	{
+		"ItemCost"						"1500"
+		"SecretShop"					"1"	
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"fade_time"				"1.5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"0"
+			}
+		}
+	}
+	"item_yasha"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_blades_of_attack"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_broadsword"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_chainmail"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_claymore"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_helm_of_iron_will"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_javelin"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mithril_hammer"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_platemail"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_quarterstaff"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_quelling_blade"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ring_of_protection"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_stout_shield"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_gauntlets"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_slippers"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mantle"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_branches"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_belt_of_strength"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_boots_of_elves"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_robe"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_circlet"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ogre_axe"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_blade_of_alacrity"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_staff_of_wizardry"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ultimate_orb"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_gloves"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_lifesteal"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ring_of_regen"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_sobi_mask"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_gem"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_cloak"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_talisman_of_evasion"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_cheese"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_magic_stick"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_magic_wand"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_magic_wand"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ghost"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_clarity"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_dust"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_bottle"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_tango_single"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_courier"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_tpscroll"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_travel_boots"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_travel_boots"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_phase_boots"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_phase_boots"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_demon_edge"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_eagle"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_reaver"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_relic"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_hyperstone"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ring_of_health"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_void_stone"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mystic_staff"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_energy_booster"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_point_booster"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_vitality_booster"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_power_treads"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_power_treads"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_hand_of_midas"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_hand_of_midas"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_oblivion_staff"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_oblivion_staff"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_pers"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_pers"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_poor_mans_shield"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_poor_mans_shield"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_bracer"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_bracer"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_wraith_band"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_wraith_band"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_null_talisman"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_null_talisman"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_mekansm"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mekansm"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_vladmir"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_vladmir"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_flying_courier"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_buckler"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_buckler"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_ring_of_basilius"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ring_of_basilius"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_pipe"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_pipe"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_urn_of_shadows"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_urn_of_shadows"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_headdress"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_headdress"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_sheepstick"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_sheepstick"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_orchid"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_orchid"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_cyclone"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_cyclone"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_force_staff"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_force_staff"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_dagon"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_dagon_2"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_dagon_3"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_dagon_4"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_dagon_5"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_dagon"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_dagon_2"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_dagon_3"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_dagon_4"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_dagon_5"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_necronomicon"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_necronomicon_2"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_necronomicon_3"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_necronomicon"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_necronomicon_2"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_necronomicon_3"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_ultimate_scepter"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ultimate_scepter"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_refresher"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_refresher"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_assault"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_assault"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_heart"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_heart"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_black_king_bar"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_black_king_bar"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_aegis"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_shivas_guard"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_shivas_guard"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_bloodstone"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_bloodstone"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_sphere"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_sphere"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_reflex_energy_regen_booster"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_vanguard"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_blade_mail"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_blade_mail"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_soul_booster"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_soul_booster"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_hood_of_defiance"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_hood_of_defiance"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_rapier"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_rapier"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_monkey_king_bar"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_monkey_king_bar"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_radiance"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_radiance"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_butterfly"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_butterfly"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_greater_crit"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_greater_crit"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_basher"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_basher"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_bfury"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_bfury"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_lesser_crit"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_lesser_crit"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_armlet"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_armlet"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_invis_sword"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_invis_sword"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_sange_and_yasha"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_sange_and_yasha"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_satanic"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_satanic"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_mjollnir"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mjollnir"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_skadi"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_skadi"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_sange"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_sange"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_helm_of_the_dominator"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_helm_of_the_dominator"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_maelstrom"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_maelstrom"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_desolator"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_desolator"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_yasha"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_mask_of_madness"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mask_of_madness"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_diffusal_blade"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_diffusal_blade_2"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_diffusal_blade"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_diffusal_blade_2"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_ethereal_blade"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ethereal_blade"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_soul_ring"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_soul_ring"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_arcane_boots"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_arcane_boots"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_orb_of_venom"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_ancient_janggo"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ancient_janggo"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_medallion_of_courage"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_medallion_of_courage"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_veil_of_discord"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_veil_of_discord"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_rod_of_atos"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_rod_of_atos"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_abyssal_blade"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_abyssal_blade"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_heavens_halberd"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_heavens_halberd"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_ring_of_aquila"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_ring_of_aquila"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_tranquil_boots"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_tranquil_boots"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_halloween_candy_corn"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mystery_hook"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mystery_arrow"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mystery_missile"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mystery_toss"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_mystery_vacuum"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_halloween_rapier"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_greevil_whistle"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_greevil_whistle_toggle"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_present"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_stocking"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_skates"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_cake"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_cookie"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_coco"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_ham"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_kringle"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_mushroom"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_greevil_treat"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_greevil_garbage"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_winter_greevil_chewy"
+	{
+		"ItemPurchasable"				"0"
+	}
+}

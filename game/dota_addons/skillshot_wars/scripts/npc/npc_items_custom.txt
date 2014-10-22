@@ -1,0 +1,36 @@
+"DOTAAbilities"
+{
+	
+	"item_dummy"
+	{
+		"id"					"1099"
+		"BaseClass"				"item_datadriven"
+		"AbilityTextureName"	"item_dummy"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"				"0"
+		"ItemPurchasable"				"1"
+		"SecretShop"					"1"	
+		"Modifiers"
+		{
+			"removeitem"
+			{
+				"Passive"	"1"
+				"OnCreated"
+				{
+					"DelayedAction"
+					{
+						"Delay"		"0.1"
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"		"abilities.lua"
+								"Function"			"DummyAbility"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

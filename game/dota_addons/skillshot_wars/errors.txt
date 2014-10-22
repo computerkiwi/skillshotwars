@@ -1,0 +1,27 @@
+[ W General              ]: ConVarRef cl_rate doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_picmip doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_forceaniso doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_antialias doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_aaquality doesn't point to an existing ConVar
+[ W General              ]: ConVarRef r_shadowrendertotexture doesn't point to an existing ConVar
+[ W General              ]: ConVarRef r_flashlightdepthtexture doesn't point to an existing ConVar
+[ W General              ]: ConVarRef r_waterforceexpensive doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_vsync doesn't point to an existing ConVar
+[ W General              ]: ConVarRef r_rootlod doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_queue_mode doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_triplebuffered doesn't point to an existing ConVar
+
+---------------------------------------------------------------------------------------------------------------------
+
+[ W General              ]: ConVarRef cl_rate doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_picmip doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_forceaniso doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_antialias doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_aaquality doesn't point to an existing ConVar
+[ W General              ]: ConVarRef r_shadowrendertotexture doesn't point to an existing ConVar
+[ W General              ]: ConVarRef r_flashlightdepthtexture doesn't point to an existing ConVar
+[ W General              ]: ConVarRef r_waterforceexpensive doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_vsync doesn't point to an existing ConVar
+[ W General              ]: ConVarRef r_rootlod doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_queue_mode doesn't point to an existing ConVar
+[ W General              ]: ConVarRef mat_triplebuffered doesn't point to an existing ConVar
