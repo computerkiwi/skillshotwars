@@ -46,7 +46,7 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"45"									// Base strength
 		"AttributeStrengthGain"		"0"									// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"									// Base intelligence
+		"AttributeBaseIntelligence"	"1"									// Base intelligence
 		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
 		"AttributeBaseAgility"		"14"									// Base agility
 		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
@@ -93,7 +93,7 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"45"									// Base strength
 		"AttributeStrengthGain"		"0"									// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"									// Base intelligence
+		"AttributeBaseIntelligence"	"1"									// Base intelligence
 		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
 		"AttributeBaseAgility"		"14"									// Base agility
 		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
@@ -140,7 +140,7 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"45"									// Base strength
 		"AttributeStrengthGain"		"0"									// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"									// Base intelligence
+		"AttributeBaseIntelligence"	"1"									// Base intelligence
 		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
 		"AttributeBaseAgility"		"14"									// Base agility
 		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
@@ -187,7 +187,7 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"45"									// Base strength
 		"AttributeStrengthGain"		"0"									// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"									// Base intelligence
+		"AttributeBaseIntelligence"	"1"									// Base intelligence
 		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
 		"AttributeBaseAgility"		"14"									// Base agility
 		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
@@ -236,7 +236,7 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"45"									// Base strength
 		"AttributeStrengthGain"		"0"									// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"									// Base intelligence
+		"AttributeBaseIntelligence"	"1"									// Base intelligence
 		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
 		"AttributeBaseAgility"		"14"									// Base agility
 		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
@@ -250,9 +250,9 @@
 	//=================================================================================================================
 	// HERO: Ogre Magi
 	//=================================================================================================================
-	"npc_dota_hero_ogre_magi_skillshot"
+	"npc_dota_hero_oracle_skillshot"
 	{
-		"override_hero"				"npc_dota_hero_ogre_magi"			// Hero to override
+		"override_hero"				"npc_dota_hero_oracle"			// Hero to override
 
 		"StatusHealth"				"145"									// Base health.
 
@@ -285,7 +285,7 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"45"									// Base strength
 		"AttributeStrengthGain"		"0"									// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"									// Base intelligence
+		"AttributeBaseIntelligence"	"1"									// Base intelligence
 		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
 		"AttributeBaseAgility"		"14"									// Base agility
 		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
@@ -332,7 +332,7 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"45"									// Base strength
 		"AttributeStrengthGain"		"0"									// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"									// Base intelligence
+		"AttributeBaseIntelligence"	"1"									// Base intelligence
 		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
 		"AttributeBaseAgility"		"14"									// Base agility
 		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
@@ -379,7 +379,7 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"45"									// Base strength
 		"AttributeStrengthGain"		"0"									// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"									// Base intelligence
+		"AttributeBaseIntelligence"	"1"									// Base intelligence
 		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
 		"AttributeBaseAgility"		"14"									// Base agility
 		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
@@ -441,7 +441,7 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"45"									// Base strength
 		"AttributeStrengthGain"		"0"									// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"									// Base intelligence
+		"AttributeBaseIntelligence"	"1"									// Base intelligence
 		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
 		"AttributeBaseAgility"		"14"									// Base agility
 		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
@@ -488,9 +488,61 @@
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"45"									// Base strength
 		"AttributeStrengthGain"		"0"									// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"									// Base intelligence
+		"AttributeBaseIntelligence"	"1"									// Base intelligence
 		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
 		"AttributeBaseAgility"		"14"									// Base agility
+		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementSpeed"				"350"									// Speed.
+		"MovementTurnRate"			"0.75"									// Turning rate.
+		
+	}//=================================================================================================================
+	// HERO: Techies
+	//=================================================================================================================
+	"npc_dota_hero_techies_skillshot"
+	{
+		"override_hero"				"npc_dota_hero_techies"			// Hero to override
+
+		"StatusHealth"				"145"									// Base health.
+		
+		"LoadoutScale"          ".8"
+
+
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityLayout"				"4"
+		"Ability1"					"pudge_meat_hook"
+		"Ability2"					"mirana_arrow"
+		"Ability3"					"sun_strike_skill"
+		"Ability4"					"rattletrap_hookshot"
+		"Ability5"					""
+		"Ability6"					""
+
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"			"-1"											// Physical protection.
+		"MagicalResistance"				"25"									// Magical protection (percentage).
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"27"									// Damage range min.
+		"AttackDamageMax"			"33"									// Damage range max.
+		"AttackRate"				"1.7"									// Speed of attack.
+		"AttackAnimationPoint"		"0.5"									// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"									// Range within a target can be acquired.
+		"AttackRange"				"128"									// Range within a target can be attacked.
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"43"									// Base strength
+		"AttributeStrengthGain"		"0"									// Strength bonus per level.
+		"AttributeBaseIntelligence"	"-1"									// Base intelligence
+		"AttributeIntelligenceGain"	"0"									// Intelligence bonus per level.
+		"AttributeBaseAgility"		"12"									// Base agility
 		"AttributeAgilityGain"		"1.5"									// Agility bonus per level.
 
 		// Movement

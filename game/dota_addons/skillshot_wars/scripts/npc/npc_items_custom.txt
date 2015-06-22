@@ -33,4 +33,174 @@
 			}
 		}
 	}
-}
+	"item_scout_bot"
+	{
+	
+		
+		// Item Stuff
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"id"					"1098"
+		"BaseClass"				"item_datadriven"
+		"AbilityTextureName"	"item_scout_bot"
+		"Model"        "models/props_gameplay/recipe.vmdl" 
+		"Effect"       "particles/generic_gameplay/dropped_item.vpcf"
+		"ItemQuality"  "artifact"
+
+		"ItemCost"     "1000"
+		"ItemKillable" "0" 
+		"ItemSellable" "1"
+		"ItemPurchasable" "1"
+		"ItemDroppable" "1"
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+
+		"SecretShop"   "1"
+
+		"ItemStackable" "1"
+		"ItemPermanent" "1"
+		"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+		
+		
+		
+		
+		
+		
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastRange"				"0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"distance"			"9000"
+			}
+			"02"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"10.0"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"500"
+			}
+			"04"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"vision_radius"		"1500"
+			}
+		}
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_tinker/tinker_machine.vpcf"
+		}
+		"OnSpellStart"
+		{
+			"LinearProjectile"
+			{
+				"Target"			"POINT"
+				"EffectName"		"particles/units/heroes/hero_tinker/tinker_machine.vpcf"
+				"MoveSpeed"			"%speed"
+				"StartRadius"		"0"
+				"EndRadius"			"0"
+				"FixedDistance"		"%distance"
+				"StartPosition"		"attach_attack1"
+				"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_NONE"
+				"TargetTeams"		"DOTA_UNIT_TARGET_TEAM_NONE"
+				"HasFrontalCone"	"0"
+				"ProvidesVision"	"1"
+				"VisionRadius"		"%vision_radius"
+			}
+		}
+	}
+	"item_blood_pendant"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1097"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_octarine_core"
+		"AbilityTextureName"			"item_blood_pendant"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5900"
+		"ItemPurchasable"				"0"
+		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"mana;mb;octarine core"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intelligence"	"0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_regen"	"0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen"		"0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_cooldown"		"0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hero_lifesteal"		"25"
+			}			
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"creep_lifesteal"		"0"
+			}	
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"active_duration"		"7"
+			}
+		}
+	}

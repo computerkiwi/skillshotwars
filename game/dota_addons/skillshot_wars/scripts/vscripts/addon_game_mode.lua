@@ -1,6 +1,14 @@
 -- Generated from template
 
 require("abilities")
+require('lib.statcollection')
+
+winKills = 50
+
+statcollection.addStats({
+	modID = 'cd3297faebbc8ddf3e80e3dd1515a264' --GET THIS FROM http://getdotastats.com/#d2mods__my_mods
+})
+
 
 if CSkillshotWarsGameMode == nil then
 	CSkillshotWarsGameMode = class({})
@@ -19,6 +27,7 @@ function Precache( context )
 		PrecacheUnitByNameSync("npc_dota_hero_mirana",context)
 		PrecacheUnitByNameSync("npc_dota_hero_rattletrap",context)
 		PrecacheUnitByNameSync("npc_dota_hero_invoker",context)
+		PrecacheUnitByNameSync("npc_dota_hero_tinker",context)
 		PrecacheItemByNameSync( "item_blink_skill", context )
 end
 
@@ -28,7 +37,20 @@ function Activate()
 	GameRules.AddonTemplate:InitGameMode()
 end
 
+function CSkillshotWarsGameMode:SetReliableGold()
+	for i = 0, 11, 1 do
+		local unreliableGold = PlayerResource:GetUnreliableGold(i)
+		local reliableGold = PlayerResource:GetReliableGold(i)
+		PlayerResource:SetGold(i,0,false)
+		PlayerResource:SetGold(i,unreliableGold+reliableGold,true)
+	end
+	return 1
+end
+
 function CSkillshotWarsGameMode:InitGameMode()
+    local GameMode = GameRules:GetGameModeEntity()
+	
+
 	CSkillshotWarsGameMode.teamDeaths = {}
 	CSkillshotWarsGameMode.teamDeaths[2] = 0
 	CSkillshotWarsGameMode.teamDeaths[3] = 0
@@ -39,22 +61,45 @@ function CSkillshotWarsGameMode:InitGameMode()
 	GameRules:SetRuneSpawnTime(30)
     GameMode = GameRules:GetGameModeEntity()  
     GameMode:SetBuybackEnabled(false) 
+	GameMode:SetUseCustomHeroLevels(true)
+	GameMode:SetCustomHeroMaxLevel(1)	
+	GameMode:SetLoseGoldOnDeath(false)
+	--Set which runes are available
+	GameMode:SetRuneEnabled( 0, true ) --Illusion
+	GameMode:SetRuneEnabled( 1, true ) --Haste
+	GameMode:SetRuneEnabled( 2, true ) --Double Damage
+	GameMode:SetRuneEnabled( 3, false ) --Invis
+	GameMode:SetRuneEnabled( 4, false ) --Regen
+	GameMode:SetRuneEnabled( 5, false ) --Bounty
 	
 	
 	
-	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( CSkillshotWarsGameMode, "OnNPCSpawned" ), self )
-	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CSkillshotWarsGameMode, "OnEntDeath" ), self )
+    GameMode:SetContextThink( "CSkillshotWarsGameMode:GameThink", function() return self:GameThink() end, 0.25 )
+	--GameMode:SetContextThink("CSkillshotWarsGameMode:SetReliableGold",function() return self:SetReliableGold() end,0)
+	
+	
+	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CSkillshotWarsGameMode, "OnHeroPicked" ), self )
+	ListenToGameEvent( "dota_team_kill_credit", Dynamic_Wrap( CSkillshotWarsGameMode, "OnTeamKillCredit" ), self )
 	print( "Skillshot Wars is loaded." )
 end
 
-function CSkillshotWarsGameMode:OnNPCSpawned(event)
-	local spawnedUnit = EntIndexToHScript( event.entindex )
+playersAmount = 0
+
+
+function CSkillshotWarsGameMode:OnHeroPicked(event)
+	local spawnedUnit = EntIndexToHScript( event.heroindex )
 	
-	if spawnedUnit:IsRealHero() == true then
-		if spawnedUnit:GetDeaths() == 0 then
+	playersAmount = playersAmount + 1
+	print(PlayerResource:HaveAllPlayersJoined())
+	
+	
+	if spawnedUnit:IsRealHero() == true then --This line shouldn't be necessary anymore.
+		if spawnedUnit:GetDeaths() == 0 then --If this is the first time spawning...
 			spawnedUnit:SetAbilityPoints(0)
+			
+			--Get rid of default gold/xp bounties
 			spawnedUnit:SetCustomDeathXP(0)
-		
+			
 			pudge_meat_hook = Entities:FindByClassname(nil,"pudge_meat_hook")
 			mirana_arrow = Entities:FindByName(nil,"mirana_arrow")
 			sun_strike = Entities:FindByName(nil,"sun_strike_skill")
@@ -64,18 +109,17 @@ function CSkillshotWarsGameMode:OnNPCSpawned(event)
 			spawnedUnit:UpgradeAbility(sun_strike)
 			spawnedUnit:UpgradeAbility(rattletrap_hookshot)
 			spawnedUnit:SetGold(0,false)
-			spawnedUnit:SetGold(150,true)
+			spawnedUnit:SetGold(250,true)
 		end
 	end
 
 end
 
-function CSkillshotWarsGameMode:OnEntDeath(event)
-	local deadUnit = EntIndexToHScript( event.entindex_killed )
-	teamNumber = deadUnit:GetTeamNumber()
-	CSkillshotWarsGameMode.teamDeaths[teamNumber] = CSkillshotWarsGameMode.teamDeaths[teamNumber] + 1
-	if CSkillshotWarsGameMode.teamDeaths[teamNumber] >= 50 then
-		GameRules:MakeTeamLose(teamNumber)
+function CSkillshotWarsGameMode:OnTeamKillCredit(event)
+	local killer = PlayerResource:GetSelectedHeroEntity( event.killer_userid )
+	teamNumber = killer:GetTeamNumber()
+	if event.herokills >= winKills then --This number is how many points needed to win.
+		GameRules:SetGameWinner(teamNumber)
 	end
 end
 
@@ -87,4 +131,21 @@ function CSkillshotWarsGameMode:OnThink()
 		return nil
 	end
 	return 1
+end
+
+
+
+function CSkillshotWarsGameMode:GameThink()
+    -- Check to see if the game has finished
+    if GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
+		print("1")
+        -- Send stats
+        statcollection.sendStats()
+
+        -- Delete the thinker
+        return
+    else
+        -- Check again in 1 second
+        return 1
+    end
 end

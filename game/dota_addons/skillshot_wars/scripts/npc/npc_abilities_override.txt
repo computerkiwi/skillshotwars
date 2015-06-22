@@ -18,11 +18,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"7"
+		"AbilityCooldown"				"5"
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"100"
+		"AbilityDamage"					"175"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -201,28 +201,97 @@
 	//ITEM CLEARING
 	"item_ward_observer"
 	{
-		"SecretShop"					"1"	
+		"SecretShop"					"0"	
 	}
 	"item_ward_sentry"
 	{
-		"SecretShop"					"1"	
+		"SecretShop"					"0"	
 	}
 	"item_smoke_of_deceit"
 	{
-		"SecretShop"					"1"	
+		"SecretShop"					"0"	
 	}
 	"item_flask"
 	{
-		"SecretShop"					"1"	
+		"SecretShop"					"0"	
 	}
 	"item_boots"
 	{
 		"SecretShop"					"1"	
+		"ItemCost"						"1000"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"	"75"
+			}
+		}
 	}
 	"item_blink"
 	{
 		"ItemCost"						"1500"
 		"SecretShop"					"1"	
+	}
+	//=================================================================================================================
+	// Recipe: Refresher
+	//=================================================================================================================
+	"item_recipe_refresher"
+	{
+		"ItemRecipe"					"1"
+		"ItemCost"						"1500"
+		"SecretShop"					"1"	
+		"ItemRequirements"
+		{
+			"01"						"item_dummy"
+		}
+	}
+	
+	//=================================================================================================================
+	// Refresher
+	//=================================================================================================================
+	"item_refresher"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"110"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"45.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"ItemCost"						"1500"
+		"ItemShopTags"					"regen_health;regen_mana;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"refresher orb"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_regen"	"0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen"		"0"
+			}		
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"0"
+			}		
+		}
 	}
 	"item_manta"
 	{
@@ -233,7 +302,7 @@
 
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"35.0"
+		"AbilityCooldown"				"20.0"
 		"AbilityCastPoint"				"0.0"
 
 		// Item Info
@@ -247,15 +316,6 @@
 		"ItemAliases"					"manta style"
 		"ItemDisassembleRule"			""
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		
-		"OnSpellStart"
-		{
-			"ApplyModifier"
-			{
-				"Target"			"CASTER"
-				"ModifierName"		"modifier_item_manta_style"
-			}
-		}
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -289,58 +349,73 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"images_count"			"2"
-			}
+				"images_count"			"3"
+			}			
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"images_do_damage_percent_melee"	"-67"
+				"tooltip_illusion_duration"			"20"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"images_take_damage_percent_melee"	"250"
+				"images_do_damage_percent_melee"	"-100"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"images_do_damage_percent_ranged"	"-72"
-			}
+				"tooltip_damage_outgoing_melee"			"0"
+			}	
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"images_take_damage_percent_ranged"	"300"
+				"images_take_damage_percent_melee"	"9900"
 			}
 			"11"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"cooldown_melee"		"35.0"
-			}
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_damage_incoming_melee_total_pct"			"10000"
+			}			
 			"12"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"cooldown_melee"		"35.0"
+				"var_type"				"FIELD_INTEGER"
+				"images_do_damage_percent_ranged"	"-100"
 			}
 			"13"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"invuln_duration"		"0.1"
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_damage_outgoing_ranged"			"0"
 			}
 			"14"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"vision_radius"			"1000"
+				"images_take_damage_percent_ranged"	"9900"
 			}
 			"15"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_outgoing_melee"			"33"
+				"tooltip_damage_incoming_ranged_total_pct"			"10000"
 			}
 			"16"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"tooltip_outgoing_range"			"28"
+				"var_type"				"FIELD_FLOAT"
+				"cooldown_melee"		"20.0"
 			}
+			"17"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"50"
+			}
+			"18"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"invuln_duration"		"0.1"
+			}
+			"19"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_radius"			"1000"
+			}			
 		}
 	}
 	"item_recipe_manta"
@@ -353,26 +428,197 @@
 			"01"						"item_dummy"
 		}
 	}
-	"item_shadow_amulet"
+	//=================================================================================================================
+	// Recipe: Glimmer Cape
+	//=================================================================================================================
+	"item_recipe_glimmer_cape"
 	{
-		"ItemCost"						"1500"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"253"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1200"	
 		"SecretShop"					"1"	
-
-		"AbilitySpecial"
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_glimmer_cape"
+		"ItemRequirements"
 		{
+			"01"						"item_dummy"
+		}
+	}
+
+	//=================================================================================================================
+	// Glimmer Cape
+	//=================================================================================================================
+	"item_glimmer_cape"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"254"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"FightRecapLevel"				"1"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCooldown"				"16.0"
+		"AbilityManaCost"				"0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1200"
+		"ItemShopTags"					""
+		"SecretShop"					"1"	
+		"ItemQuality"					"rare"
+		"ItemAliases"					"glimmer cape"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{			
 			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"fade_time"				"1.5"
-			}
-			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_attack_speed"	"0"
 			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_magical_armor"	"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"fade_delay"				"0.4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"active_magical_armor"	"55"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"	"5"
+			}
 		}
 	}
+	//=================================================================================================================
+	// Recipe: Travel Boots
+	//=================================================================================================================
+	"item_recipe_travel_boots_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"219"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.mdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1500"	
+		"SecretShop"					"1"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_travel_boots_2"
+		"ItemRequirements"
+		{
+			"01"						"item_dummy"
+		}
+	}//=================================================================================================================
+	// Travel Boots 2
+	//=================================================================================================================
+	"item_travel_boots_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"220"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"11.5"
+		"AbilitySharedCooldown"			"teleport"
+		"AbilityChannelTime"			"1.5"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"ItemCost"						"1500"
+		"SecretShop"					"1"	
+		"ItemShopTags"					"teleport;move_speed"
+		"ItemQuality"					"common"
+		"ItemAliases"					"bot;boots of travel"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"	"0"
+			}
+		}
+	}
+	"item_recipe_crimson_guard"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_crimson_guard"
+	{
+		"ItemPurchasable"				"0"
+	}
 	"item_yasha"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_enchanted_mango"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_lotus_orb"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_shadow_amulet"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_guardian_greaves"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_moon_shard"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_silver_edge"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_solar_crest"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_octarine_core"
 	{
 		"ItemPurchasable"				"0"
 	}
@@ -552,7 +798,7 @@
 	{
 		"ItemPurchasable"				"0"
 	}
-	"item_recipe_phase_boots"
+	"item_recipe_phase_boots_2"
 	{
 		"ItemPurchasable"				"0"
 	}
@@ -829,14 +1075,6 @@
 		"ItemPurchasable"				"0"
 	}
 	"item_ultimate_scepter"
-	{
-		"ItemPurchasable"				"0"
-	}
-	"item_recipe_refresher"
-	{
-		"ItemPurchasable"				"0"
-	}
-	"item_refresher"
 	{
 		"ItemPurchasable"				"0"
 	}

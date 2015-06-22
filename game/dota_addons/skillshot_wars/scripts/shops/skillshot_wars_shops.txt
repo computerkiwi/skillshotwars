@@ -2,6 +2,10 @@
 {
 	"consumables"
 	{
+		"item"		"item_ward_observer"
+		"item"		"item_ward_sentry"
+		"item"		"item_smoke_of_deceit"
+		"item"		"item_flask"
 	}
 
 	"attributes"
@@ -14,6 +18,13 @@
 	
 	"misc"
 	{
+		"item"		"item_boots"
+		"item"		"item_scout_bot"
+		"item"		"item_glimmer_cape"
+		"item"		"item_blink"
+		"item"		"item_manta"
+		"item"		"item_travel_boots_2"
+		"item"		"item_refresher"
 	}	
 	
 	// Level 1 - Green Recipes
@@ -54,13 +65,12 @@
 	
 	"secretshop"
 	{
-		"item"		"item_ward_observer"
-		"item"		"item_ward_sentry"
-		"item"		"item_smoke_of_deceit"
-		"item"		"item_flask"
 		"item"		"item_boots"
+		"item"		"item_scout_bot"
+		"item"		"item_glimmer_cape"
 		"item"		"item_blink"
 		"item"		"item_manta"
-		"item"		"item_shadow_amulet"
+		"item"		"item_travel_boots_2"
+		"item"		"item_refresher"
 	}
 }

@@ -1,9 +1,8 @@
 skillshot_wars
 {
 	material materials/overviews/skillshot_wars.vmat
-	pos_x -8192
-	pos_y 8192
-	scale 16.000
-	zoom 1.050
+	pos_x -5504
+	pos_y 3968
+	scale 10.500
 }
 
