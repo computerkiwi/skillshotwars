@@ -59,7 +59,9 @@ function CSkillshotWarsGameMode:InitGameMode()
 	GameRules:SetHeroSelectionTime(15)
 	GameRules:SetPreGameTime(15)
 	GameRules:SetRuneSpawnTime(30)
+	GameRules:SetGoldPerTick(2)
     GameMode = GameRules:GetGameModeEntity()  
+    GameMode:SetFountainPercentageHealthRegen(10)
     GameMode:SetBuybackEnabled(false) 
 	GameMode:SetUseCustomHeroLevels(true)
 	GameMode:SetCustomHeroMaxLevel(1)	
@@ -97,7 +99,7 @@ function CSkillshotWarsGameMode:OnHeroPicked(event)
 		if spawnedUnit:GetDeaths() == 0 then --If this is the first time spawning...
 			spawnedUnit:SetAbilityPoints(0)
 			
-			--Get rid of default gold/xp bounties
+			--Get rid of default xp bounty
 			spawnedUnit:SetCustomDeathXP(0)
 			
 			pudge_meat_hook = Entities:FindByClassname(nil,"pudge_meat_hook")
@@ -118,6 +120,15 @@ end
 function CSkillshotWarsGameMode:OnTeamKillCredit(event)
 	local killer = PlayerResource:GetSelectedHeroEntity( event.killer_userid )
 	teamNumber = killer:GetTeamNumber()
+	--Give killer extra bounty.
+	killer:ModifyGold(100, true, DOTA_ModifyGold_HeroKill)
+	--Give killer's team bounty.
+	local allHeroes = HeroList:GetAllHeroes()
+	for index,hero in pairs(allHeroes) do
+		if (hero:GetTeamNumber() == teamNumber) then
+			hero:ModifyGold(50,true,DOTA_ModifyGold_HeroKill)
+		end
+	end
 	if event.herokills >= winKills then --This number is how many points needed to win.
 		GameRules:SetGameWinner(teamNumber)
 	end

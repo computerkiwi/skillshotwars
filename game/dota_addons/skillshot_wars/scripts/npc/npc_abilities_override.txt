@@ -218,7 +218,7 @@
 	"item_boots"
 	{
 		"SecretShop"					"1"	
-		"ItemCost"						"1000"
+		"ItemCost"						"750"
 		
 		"AbilitySpecial"
 		{
