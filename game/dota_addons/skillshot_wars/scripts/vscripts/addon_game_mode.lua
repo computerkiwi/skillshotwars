@@ -121,12 +121,12 @@ function CSkillshotWarsGameMode:OnTeamKillCredit(event)
 	local killer = PlayerResource:GetSelectedHeroEntity( event.killer_userid )
 	teamNumber = killer:GetTeamNumber()
 	--Give killer extra bounty.
-	killer:ModifyGold(100, true, DOTA_ModifyGold_HeroKill)
+	killer:ModifyGold(25, true, DOTA_ModifyGold_HeroKill)
 	--Give killer's team bounty.
 	local allHeroes = HeroList:GetAllHeroes()
 	for index,hero in pairs(allHeroes) do
 		if (hero:GetTeamNumber() == teamNumber) then
-			hero:ModifyGold(50,true,DOTA_ModifyGold_HeroKill)
+			hero:ModifyGold(20,true,DOTA_ModifyGold_HeroKill)
 		end
 	end
 	if event.herokills >= winKills then --This number is how many points needed to win.

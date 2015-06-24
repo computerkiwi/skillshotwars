@@ -134,37 +134,3 @@
 			}
 		}
 	}
-	"item_elixir_of_focus"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1097"														
-		"BaseClass"						"item_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"Model"							"models/props_gameplay/salve.mdl"
-		
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"250"
-		"AbilityCastPoint"				"0.0"
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"200"
-		"ItemPurchasable"				"0"
-		"ItemShopTags"					"consumable"
-		"ItemQuality"					"consumable"
-		"ItemAliases"					"focus,elixir,elixir of focus"
-		"ItemStackable"					"1"
-		"ItemPermanent"					"0"
-		"ItemInitialCharges"			"1"
-
-		"OnSpellStart"
-		{
-				
-		}
-
-		
-	}
