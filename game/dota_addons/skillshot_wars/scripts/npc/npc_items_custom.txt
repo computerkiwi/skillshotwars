@@ -134,3 +134,113 @@
 			}
 		}
 	}
+	"item_swap"
+	{
+	
+		
+		// Item Stuff
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"id"					"1097"
+		"BaseClass"				"item_datadriven"
+		"AbilityTextureName"	"item_dummy"
+		"Model"        "models/props_gameplay/recipe.vmdl" 
+		"Effect"       "particles/generic_gameplay/dropped_item.vpcf"
+		"ItemQuality"  "artifact"
+
+		"ItemCost"     "1000"
+		"ItemKillable" "0" 
+		"ItemSellable" "1"
+		"ItemPurchasable" "1"
+		"ItemDroppable" "1"
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+
+		"SecretShop"   "1"
+
+		"ItemStackable" "1"
+		"ItemPermanent" "1"
+		"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+		
+		
+		
+		
+		
+		
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastRange"				"0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"distance"			"9000"
+			}
+		}
+		"OnSpellStart"
+		{
+			
+		"FireSound"
+		{
+			"EffectName"	"Hero_VengefulSpirit.NetherSwap"
+			"Target" 		"TARGET"
+		}
+		
+		"FireSound"
+		{
+			"EffectName"	"Hero_VengefulSpirit.NetherSwap"
+			"Target" 		"CASTER"
+		}
+		
+		"FireEffect"
+		{
+			"EffectName"        "particles/units/heroes/hero_vengeful/vengeful_nether_swap.vpcf"
+			"EffectAttachType"  "start_at_customorigin"
+			
+			"ControlPointEntities"
+			{
+				"TARGET"	"follow_origin"
+				"CASTER"	"follow_origin"
+			}
+		}
+
+		"FireEffect"
+		{
+			"EffectName"        "particles/units/heroes/hero_vengeful/vengeful_nether_swap_pink.vpcf"
+			"EffectAttachType"  "start_at_customorigin"
+			
+			"ControlPointEntities"
+			{
+				"CASTER"	"follow_origin"
+				"TARGET"	"follow_origin"
+			}
+		}
+			"RunScript"
+			{
+				"ScriptFile"	"swap.lua"
+				"Function"		"swap_ability"
+			}
+		}
+	}
+}

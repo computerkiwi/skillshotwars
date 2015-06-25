@@ -92,7 +92,6 @@ function CSkillshotWarsGameMode:OnHeroPicked(event)
 	local spawnedUnit = EntIndexToHScript( event.heroindex )
 	
 	playersAmount = playersAmount + 1
-	print(PlayerResource:HaveAllPlayersJoined())
 	
 	
 	if spawnedUnit:IsRealHero() == true then --This line shouldn't be necessary anymore.
