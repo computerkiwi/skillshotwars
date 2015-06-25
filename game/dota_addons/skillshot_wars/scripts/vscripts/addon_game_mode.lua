@@ -29,6 +29,7 @@ function Precache( context )
 		PrecacheUnitByNameSync("npc_dota_hero_invoker",context)
 		PrecacheUnitByNameSync("npc_dota_hero_tinker",context)
 		PrecacheItemByNameSync( "item_blink_skill", context )
+		PrecacheUnitByNameSync("npc_dota_hero_vengefulspirit",context)
 end
 
 -- Create the game mode when we activate
