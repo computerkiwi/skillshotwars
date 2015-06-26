@@ -1,0 +1,9 @@
+<root>
+	<script>
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_SHOP_SUGGESTEDITEMS, false);
+	</script>
+ 	<Panel>
+ 		<CustomUIElement type="HudTopBar"			layoutfile="file://{resources}/layout/custom_game/top_scoreboard.xml" />
+ 	</Panel>
+	
+</root>
