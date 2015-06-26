@@ -2,6 +2,7 @@
 
 require("abilities")
 require('lib.statcollection')
+require('lib.timers')
 
 winKills = 50
 
@@ -30,6 +31,7 @@ function Precache( context )
 		PrecacheUnitByNameSync("npc_dota_hero_tinker",context)
 		PrecacheItemByNameSync( "item_blink_skill", context )
 		PrecacheUnitByNameSync("npc_dota_hero_vengefulspirit",context)
+		PrecacheUnitByNameSync("npc_dota_hero_techies",context)
 end
 
 -- Create the game mode when we activate

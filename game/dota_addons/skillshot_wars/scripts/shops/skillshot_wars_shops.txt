@@ -23,7 +23,7 @@
 		"item"		"item_glimmer_cape"
 		"item"		"item_gem_of_vengeance"
 		"item"		"item_blink"
-		"item"		"item_manta"
+		"item"		"item_manta_dummy"
 		"item"		"item_travel_boots_2"
 		"item"		"item_refresher"
 	}	
@@ -71,7 +71,7 @@
 		"item"		"item_glimmer_cape"
 		"item"		"item_gem_of_vengeance"
 		"item"		"item_blink"
-		"item"		"item_manta"
+		"item"		"item_manta_dummy"
 		"item"		"item_travel_boots_2"
 		"item"		"item_refresher"
 	}

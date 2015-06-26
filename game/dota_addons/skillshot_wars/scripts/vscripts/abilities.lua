@@ -1,5 +1,5 @@
 function DummyAbility(keys)
-	caster = keys.caster
+	local caster = keys.caster
 	print (caster:GetUnitName())
 	for i=0,6 do
 		local item = caster:GetItemInSlot(i)
@@ -9,4 +9,21 @@ function DummyAbility(keys)
 		item = nil
 	end
 
+end
+
+
+function FixItem(keys,realItem)
+	local caster = keys.caster
+	for i=0,6 do
+		local item = caster:GetItemInSlot(i)
+		if item ~= nil and item:GetAbilityName() == keys.ability:GetAbilityName() then
+			caster:RemoveItem(item)
+			caster:AddItemByName(realItem)
+		end
+	end
+	print(realItem)
+end
+
+function FixManta(keys)
+	FixItem(keys,"item_manta")
 end

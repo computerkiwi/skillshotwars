@@ -43,8 +43,8 @@
 		"id"					"1098"
 		"BaseClass"				"item_datadriven"
 		"AbilityTextureName"	"item_scout_bot"
-		"Model"        "models/props_gameplay/recipe.vmdl" 
-		"Effect"       "particles/generic_gameplay/dropped_item.vpcf"
+		"Model"					"models/props_gameplay/red_box.vmdl" 
+		"Effect"				"particles/generic_gameplay/dropped_item.vpcf"
 		"ItemQuality"  "artifact"
 
 		"ItemCost"     "1000"
@@ -144,8 +144,8 @@
 		"id"					"1097"
 		"BaseClass"				"item_datadriven"
 		"AbilityTextureName"	"item_gem_of_vengeance"
-		"Model"        "models/props_gameplay/recipe.vmdl" 
-		"Effect"       "particles/generic_gameplay/dropped_item.vpcf"
+		"Model"					"models/props_gameplay/red_box.vmdl" 
+		"Effect"				"particles/generic_gameplay/dropped_item.vpcf"
 		"ItemQuality"  "artifact"
 
 		"ItemCost"     "1500"
@@ -201,41 +201,41 @@
 		"OnSpellStart"
 		{
 
-		"FireSound"
-		{
-			"EffectName"	"Hero_VengefulSpirit.NetherSwap"
-			"Target" 		"TARGET"
-		}
-		
-		"FireSound"
-		{
-			"EffectName"	"Hero_VengefulSpirit.NetherSwap"
-			"Target" 		"CASTER"
-		}
-		
-		"FireEffect"
-		{
-			"EffectName"        "particles/units/heroes/hero_vengeful/vengeful_nether_swap.vpcf"
-			"EffectAttachType"  "start_at_customorigin"
-			
-			"ControlPointEntities"
+			"FireSound"
 			{
-				"TARGET"	"follow_origin"
-				"CASTER"	"follow_origin"
+				"EffectName"	"Hero_VengefulSpirit.NetherSwap"
+				"Target" 		"TARGET"
 			}
-		}
+			
+			"FireSound"
+			{
+				"EffectName"	"Hero_VengefulSpirit.NetherSwap"
+				"Target" 		"CASTER"
+			}
+			
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_vengeful/vengeful_nether_swap.vpcf"
+				"EffectAttachType"  "start_at_customorigin"
+				
+				"ControlPointEntities"
+				{
+					"TARGET"	"follow_origin"
+					"CASTER"	"follow_origin"
+				}
+			}
 
-		"FireEffect"
-		{
-			"EffectName"        "particles/units/heroes/hero_vengeful/vengeful_nether_swap_pink.vpcf"
-			"EffectAttachType"  "start_at_customorigin"
-			
-			"ControlPointEntities"
+			"FireEffect"
 			{
-				"CASTER"	"follow_origin"
-				"TARGET"	"follow_origin"
+				"EffectName"        "particles/units/heroes/hero_vengeful/vengeful_nether_swap_pink.vpcf"
+				"EffectAttachType"  "start_at_customorigin"
+				
+				"ControlPointEntities"
+				{
+					"CASTER"	"follow_origin"
+					"TARGET"	"follow_origin"
+				}
 			}
-		}
 			"RunScript"
 			{
 				"ScriptFile"	"swap.lua"
@@ -243,4 +243,54 @@
 			}
 		}
 	}
+
+"item_manta_dummy"
+{
+	"BaseClass"						"item_datadriven"
+	"ID"							"1096" 
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"Model"							"models/props_gameplay/red_box.vmdl" 
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_manta_skill"
+	"ItemKillable" "0" 
+	"ItemSellable" "1"
+	"ItemPurchasable" "1"
+	"ItemDroppable" "1"
+	"ItemCost"						"1500"
+	"SecretShop"					"1"	
+	"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_STRING"
+				"realItem"				"item_manta"
+			}
+		}
+	"Modifiers"
+		{
+			"fixitem"
+			{
+				"Passive"	"1"
+				"OnCreated"
+				{
+					"DelayedAction"
+					{
+						"Delay"		"0.1"
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"		"abilities.lua"
+								"Function"			"FixManta"
+								"realItem"			"%realItem"
+							}
+						}
+					}
+				}
+			}
+		}
 }
+
+
+
+}`
