@@ -1,38 +1,5 @@
 "DOTAAbilities"
 {
-	
-	"item_dummy"
-	{
-		"id"					"1099"
-		"BaseClass"				"item_datadriven"
-		"AbilityTextureName"	"item_dummy"
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"				"0"
-		"ItemPurchasable"				"1"
-		"SecretShop"					"1"	
-		"Modifiers"
-		{
-			"removeitem"
-			{
-				"Passive"	"1"
-				"OnCreated"
-				{
-					"DelayedAction"
-					{
-						"Delay"		"0.1"
-						"Action"
-						{
-							"RunScript"
-							{
-								"ScriptFile"		"abilities.lua"
-								"Function"			"DummyAbility"
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 	"item_scout_bot"
 	{
 	
@@ -56,7 +23,7 @@
 
 		"SecretShop"   "1"
 
-		"ItemStackable" "1"
+		"ItemStackable" "0"
 		"ItemPermanent" "1"
 		"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
 		
@@ -157,7 +124,7 @@
 
 		"SecretShop"   "1"
 
-		"ItemStackable" "1"
+		"ItemStackable" "0"
 		"ItemPermanent" "1"
 		"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
 		
@@ -244,32 +211,26 @@
 		}
 	}
 
-"item_manta_dummy"
-{
-	"BaseClass"						"item_datadriven"
-	"ID"							"1096" 
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-	"Model"							"models/props_gameplay/red_box.vmdl" 
-	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
-	"AbilityTextureName"			"item_manta_skill"
-	"ItemKillable" "0" 
-	"ItemSellable" "1"
-	"ItemPurchasable" "1"
-	"ItemDroppable" "1"
-	"ItemCost"						"1500"
-	"SecretShop"					"1"	
-	"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_STRING"
-				"realItem"				"item_manta"
-			}
-		}
-	"Modifiers"
+	"item_manta_dummy"
+	{
+		"ID"							"1096" 
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_manta_dummy"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"ItemQuality"  "artifact"
+		"ItemKillable" "0" 
+		"ItemSellable" "1"
+		"ItemPurchasable" "1"
+		"ItemDroppable" "1"
+		"ItemCost"						"1500"
+		"SecretShop"					"1"	
+		"Modifiers"
 		{
 			"fixitem"
 			{
+				"IsHidden"	"1"
 				"Passive"	"1"
 				"OnCreated"
 				{
@@ -281,16 +242,134 @@
 							"RunScript"
 							{
 								"ScriptFile"		"abilities.lua"
-								"Function"			"FixManta"
-								"realItem"			"%realItem"
+								"Function"			"FixItem"
+								"RealItem"			"item_manta"
 							}
 						}
 					}
 				}
 			}
 		}
+	}
+
+	"item_refresher_dummy"
+	{
+		"ID"							"1095" 
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_refresher_dummy"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"ItemQuality"  "artifact"
+		"ItemKillable" "0" 
+		"ItemSellable" "1"
+		"ItemPurchasable" "1"
+		"ItemDroppable" "1"
+		"ItemCost"						"1500"
+		"SecretShop"					"1"	
+		"Modifiers"
+		{
+			"fixitem"
+			{
+				"IsHidden"	"1"
+				"Passive"	"1"
+				"OnCreated"
+				{
+					"DelayedAction"
+					{
+						"Delay"		"0.1"
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"		"abilities.lua"
+								"Function"			"FixItem"
+								"RealItem"			"item_refresher"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	"item_travel_boots_2_dummy"
+	{
+		"ID"							"1094" 
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_travel_boots_2_dummy"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"ItemQuality"  "artifact"
+		"ItemKillable" "0" 
+		"ItemSellable" "1"
+		"ItemPurchasable" "1"
+		"ItemDroppable" "1"
+		"ItemCost"						"1500"
+		"SecretShop"					"1"	
+		"Modifiers"
+		{
+			"fixitem"
+			{
+				"IsHidden"	"1"
+				"Passive"	"1"
+				"OnCreated"
+				{
+					"DelayedAction"
+					{
+						"Delay"		"0.1"
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"		"abilities.lua"
+								"Function"			"FixItem"
+								"RealItem"			"item_travel_boots_2"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	"item_glimmer_cape_dummy"
+	{
+		"ID"							"1093" 
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_glimmer_cape_dummy"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"ItemQuality"  "artifact"
+		"ItemKillable" "0" 
+		"ItemSellable" "1"
+		"ItemPurchasable" "1"
+		"ItemDroppable" "1"
+		"ItemCost"						"1200"
+		"SecretShop"					"1"	
+		"Modifiers"
+		{
+			"fixitem"
+			{
+				"IsHidden"	"1"
+				"Passive"	"1"
+				"OnCreated"
+				{
+					"DelayedAction"
+					{
+						"Delay"		"0.1"
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"		"abilities.lua"
+								"Function"			"FixItem"
+								"RealItem"			"item_glimmer_cape"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
-
-
-
-}`
