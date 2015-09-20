@@ -104,11 +104,11 @@ function CSkillshotWarsGameMode:OnHeroPicked(event)
 			--Get rid of default xp bounty
 			spawnedUnit:SetCustomDeathXP(0)
 			
-			pudge_meat_hook = Entities:FindByClassname(nil,"pudge_meat_hook")
+			meat_hook_skill = Entities:FindByName(nil,"meat_hook_skill")
 			mirana_arrow = Entities:FindByName(nil,"mirana_arrow")
 			sun_strike = Entities:FindByName(nil,"sun_strike_skill")
 			rattletrap_hookshot = Entities:FindByClassname(nil,"rattletrap_hookshot")
-			spawnedUnit:UpgradeAbility(pudge_meat_hook)
+			spawnedUnit:UpgradeAbility(meat_hook_skill)
 			spawnedUnit:UpgradeAbility(mirana_arrow)
 			spawnedUnit:UpgradeAbility(sun_strike)
 			spawnedUnit:UpgradeAbility(rattletrap_hookshot)

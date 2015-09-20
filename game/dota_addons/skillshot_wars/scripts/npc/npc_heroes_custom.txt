@@ -22,7 +22,7 @@
 		"StatusHealth"				"145"									// Base health.
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
@@ -69,7 +69,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
@@ -116,7 +116,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
@@ -163,7 +163,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
@@ -210,7 +210,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
@@ -259,7 +259,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
@@ -308,7 +308,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
@@ -355,7 +355,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
@@ -405,7 +405,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
@@ -464,7 +464,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
@@ -513,7 +513,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					"pudge_meat_hook"
+		"Ability1"					"meat_hook_skill"
 		"Ability2"					"mirana_arrow"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"

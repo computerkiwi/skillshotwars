@@ -218,6 +218,7 @@
 	"item_boots"
 	{
 		"SecretShop"					"1"	
+		"ItemSellable"					"0"
 		"ItemCost"						"750"
 		
 		"AbilitySpecial"
@@ -231,6 +232,7 @@
 	}
 	"item_blink"
 	{
+		"ItemSellable"					"0"
 		"ItemCost"						"1500"
 		"SecretShop"					"1"	
 	}
@@ -254,11 +256,13 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemPurchasable"				"0"
 		"AbilityManaCost"				"0"
+		"ItemSellable"					"0"
 		"ItemCost"						"1500"
 		"ItemShopTags"					"regen_health;regen_mana;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"refresher orb"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule" 			"DOTA_ITEM_DISASSEMBLE_NEVER"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -296,12 +300,14 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"0"
+		"ItemSellable"					"0"
+		"ItemSellable"					"0"
 		"ItemCost"						"1500"
 		"ItemPurchasable"				"0"
 		"ItemShopTags"					"agi;str;int;attack_speed;move_speed;hard_to_tag"
 		"ItemQuality"					"component"
 		"ItemAliases"					"manta style"
-		"ItemDisassembleRule"			""
+		"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		
 		// Special	
@@ -427,12 +433,13 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
+		"ItemSellable"					"0"
 		"ItemCost"						"1200"
 		"ItemShopTags"					""
 		"ItemPurchasable"				"0"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"glimmer cape"
-		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -487,6 +494,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"0"
+		"ItemSellable"					"0"
 		"ItemCost"						"1500"
 		"ItemPurchasable"				"0"
 		"ItemShopTags"					"teleport;move_speed"
@@ -495,6 +503,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"MaxUpgradeLevel"				"2"
 		"ItemBaseLevel"					"2"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
