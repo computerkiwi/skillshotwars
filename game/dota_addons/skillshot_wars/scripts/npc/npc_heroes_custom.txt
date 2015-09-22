@@ -23,7 +23,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 
@@ -70,7 +70,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 
@@ -117,7 +117,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 
@@ -164,7 +164,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 
@@ -211,7 +211,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 		"Ability5"					""
@@ -260,7 +260,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 		"Ability5"					""
@@ -309,7 +309,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 
@@ -356,7 +356,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 
@@ -406,7 +406,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityLayout"				"4"
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 		"Ability5"					""
@@ -465,7 +465,7 @@
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 
@@ -514,7 +514,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityLayout"				"4"
 		"Ability1"					"meat_hook_skill"
-		"Ability2"					"mirana_arrow"
+		"Ability2"					"arrow_skill"
 		"Ability3"					"sun_strike_skill"
 		"Ability4"					"rattletrap_hookshot"
 		"Ability5"					""

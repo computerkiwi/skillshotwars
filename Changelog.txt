@@ -1,1 +1,1 @@
--Swapped out pugde hook ability for a modifiable lua-based one.
+-Swapped out pugde hook and mirana arrow abilities for mor easily modifiable lua-based ones.

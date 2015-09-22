@@ -1,0 +1,6 @@
+"measurement"
+{
+	"version"		"1"
+	"timestamp"		"1442890321"
+	"upload"		"0x00000000000B73BC"
+}
