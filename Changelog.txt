@@ -1,1 +1,7 @@
--Swapped out pugde hook and mirana arrow abilities for mor easily modifiable lua-based ones.
+-Manta style images spawned changed to 1 from 3.
+-Manta style cost changed to 1200 from 1500.
+-Stun time on sacred arrow now begins to fall off at 3000 units down to a minimum of 2 seconds past 3900 units.
+--Swapped out pugde hook, sunstrike, and mirana arrow abilities for more easily modifiable lua-based ones.
+-Dislodged The shopkeeper from the wall.
+-Fixed a bug with odd scoreboard behavior after fountain kills.
+-Made some back-end changes to make future modification of certain abilities easier.

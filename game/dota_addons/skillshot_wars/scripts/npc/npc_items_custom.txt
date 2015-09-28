@@ -224,7 +224,7 @@
 		"ItemPurchasable" "1"
 		"ItemDroppable" "1"
 		"ItemSellable"					"0"
-		"ItemCost"						"1500"
+		"ItemCost"						"1200"
 		"SecretShop"					"1"	
 		"Modifiers"
 		{

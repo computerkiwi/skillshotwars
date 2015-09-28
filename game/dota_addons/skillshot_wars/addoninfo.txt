@@ -1,3 +1,9 @@
 "AddonInfo"
 {
+	maps			"skillshot_wars"
+	"IsPlayable"	"1"
+	"skillshot_wars"
+	{
+					"MaxPlayers"                    "10"
+	}
 }

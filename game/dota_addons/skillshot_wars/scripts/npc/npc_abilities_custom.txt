@@ -2,18 +2,35 @@
 "DOTAAbilities"
 {
 	"Version"		"1"
-	//=================================================================================================================
-	// Skilled Sunstrike
-	//=================================================================================================================
+	// Rewrite of the Invoker Sun Strike ability
+	// Author: Pizzalol
+	// Date: 20.04.2015.
 	"sun_strike_skill"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"invoker_sun_strike"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"MaxLevel"						"1"
+		"HotKeyOverride"				"T"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_NOT_ILLUSION"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
-
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"invoker_sun_strike"
+		"AOERadius"						"%area_of_effect"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+			"particle"		"particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
+			"particle"		"particles/units/heroes/hero_invoker/invoker_sun_strike_team.vpcf"
+		}
+	
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"0"
@@ -39,7 +56,6 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"damage"				"300"
-				"levelkey"				"exortlevel"
 			}
 			"04"
 			{
@@ -52,7 +68,79 @@
 				"vision_duration"		"4.0"
 			}
 		}
+	
+		"OnSpellStart"
+		{
+			"CreateThinker"
+			{
+				"ModifierName"	"modifier_sun_strike_datadriven"
+				"Target" 		"POINT"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"modifier_sun_strike_datadriven"
+			{
+				"Duration"		"%delay"
+	
+				"OnCreated"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_invisible"
+						"Target" 		"TARGET"
+						"Duration"		"%delay - 0.1" // This is so that the charge sound isnt heard
+					}
+	
+					"FireSound"
+					{
+						"EffectName"	"Hero_Invoker.SunStrike.Charge"
+						"Target" 		"TARGET"
+					}
+	
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/sun_strike_skill.lua"
+						"Function"		"sun_strike_charge"
+						"charge_particle"	"particles/units/heroes/hero_invoker/invoker_sun_strike_team.vpcf"
+					}
+	
+					"DelayedAction"
+					{
+						"Delay"     "%delay"
+						"Action"    
+						{
+							"FireSound"
+							{
+								"EffectName"	"Hero_Invoker.SunStrike.Ignite"
+								"Target" 		"TARGET"
+							}
+	
+							"FireEffect"
+							{
+								"EffectName"        "particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
+								"EffectAttachType"  "follow_origin"
+								"Target"            "TARGET"
+	
+								"ControlPoints"
+								{
+									"01"	"%area_of_effect 0 0"
+								}
+							}
+	
+							"RunScript"
+							{
+								"ScriptFile"	"abilities/sun_strike_skill.lua"
+								"Function"		"sun_strike_damage"
+							}
+						}
+					}
+				}
+			}
+		}
 	}
+
 
 
 	// Rewrite of the Mirana Sacred Arrow ability
@@ -123,30 +211,60 @@
 			}
 			"05"
 			{
+				"var_type"			"FIELD_INTEGER"
+				"arrow_min_falloff_stunrange"	"3000"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"arrow_max_falloff_stunrange"	"3900"
+			}
+			"07"
+			{
 				"var_type"			"FIELD_FLOAT"
 				"arrow_min_stun"	"0.01"
 			}
-			"06"
+			"08"
 			{
 				"var_type"			"FIELD_FLOAT"
 				"arrow_max_stun"	"5.0"
 			}
-			"07"
+			"09"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"arrow_min_falloff_stun"	"2.0"
+			}
+			"10"
 			{
 				"var_type"			"FIELD_INTEGER"
 				"arrow_bonus_damage"	"140"
 			}
-			"08"
+			"11"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"arrow_min_falloff_bonus_damage"	"140"
+			}
+			"12"
 			{
 				"var_type"			"FIELD_INTEGER"
 				"arrow_vision"	"650"
 			}
-			"09"
+			"13"
 			{
 				"var_type"			"FIELD_INTEGER"
 				"arrow_max_damagerange"	"1500"
 			}
-			"10"
+			"14"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"arrow_min_falloff_damagerange"	"2000"
+			}
+			"15"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"arrow_max_falloff_damagerange"	"2500"
+			}
+			"16"
 			{
 				"var_type"			"FIELD_FLOAT"
 				"vision_duration"	"3.0"

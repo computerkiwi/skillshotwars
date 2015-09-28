@@ -302,7 +302,7 @@
 		"AbilityManaCost"				"0"
 		"ItemSellable"					"0"
 		"ItemSellable"					"0"
-		"ItemCost"						"1500"
+		"ItemCost"						"1200"
 		"ItemPurchasable"				"0"
 		"ItemShopTags"					"agi;str;int;attack_speed;move_speed;hard_to_tag"
 		"ItemQuality"					"component"
@@ -342,7 +342,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"images_count"			"3"
+				"images_count"			"1"
 			}			
 			"07"
 			{

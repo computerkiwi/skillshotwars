@@ -121,9 +121,11 @@ end
 
 function CSkillshotWarsGameMode:OnTeamKillCredit(event)
 	local killer = PlayerResource:GetSelectedHeroEntity( event.killer_userid )
-	teamNumber = killer:GetTeamNumber()
-	--Give killer extra bounty.
-	killer:ModifyGold(25, true, DOTA_ModifyGold_HeroKill)
+	local teamNumber = event.teamnumber
+	if killer ~= nil then
+		--Give killer extra bounty.
+		killer:ModifyGold(25, true, DOTA_ModifyGold_HeroKill)
+	end
 	--Give killer's team bounty.
 	local allHeroes = HeroList:GetAllHeroes()
 	for index,hero in pairs(allHeroes) do

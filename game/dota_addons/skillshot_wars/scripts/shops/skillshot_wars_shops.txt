@@ -21,9 +21,9 @@
 		"item"		"item_boots"
 		"item"		"item_scout_bot"
 		"item"		"item_glimmer_cape_dummy"
+		"item"		"item_manta_dummy"
 		"item"		"item_gem_of_vengeance"
 		"item"		"item_blink"
-		"item"		"item_manta_dummy"
 		"item"		"item_travel_boots_2_dummy"
 		"item"		"item_refresher_dummy"
 	}	
@@ -69,9 +69,9 @@
 		"item"		"item_boots"
 		"item"		"item_scout_bot"
 		"item"		"item_glimmer_cape_dummy"
+		"item"		"item_manta_dummy"
 		"item"		"item_gem_of_vengeance"
 		"item"		"item_blink"
-		"item"		"item_manta_dummy"
 		"item"		"item_travel_boots_2_dummy"
 		"item"		"item_refresher_dummy"
 	}

@@ -38,14 +38,25 @@ function ArrowHit( keys )
 
 	-- Arrow
 	local arrow_max_stunrange = ability:GetLevelSpecialValueFor("arrow_max_stunrange", (ability:GetLevel() - 1))
+	local arrow_min_falloff_stunrange = ability:GetLevelSpecialValueFor("arrow_min_falloff_stunrange", (ability:GetLevel() - 1))
+	local arrow_max_falloff_stunrange = ability:GetLevelSpecialValueFor("arrow_max_falloff_stunrange", (ability:GetLevel() - 1))
+
 	local arrow_max_damagerange = ability:GetLevelSpecialValueFor("arrow_max_damagerange", (ability:GetLevel() - 1))
+	local arrow_min_falloff_damagerange = ability:GetLevelSpecialValueFor("arrow_min_falloff_damagerange", (ability:GetLevel() - 1))
+	local arrow_max_falloff_damagerange = ability:GetLevelSpecialValueFor("arrow_max_falloff_damagerange", (ability:GetLevel() - 1))
+
 	local arrow_min_stun = ability:GetLevelSpecialValueFor("arrow_min_stun", (ability:GetLevel() - 1))
 	local arrow_max_stun = ability:GetLevelSpecialValueFor("arrow_max_stun", (ability:GetLevel() - 1))
+	local arrow_min_falloff_stun = ability:GetLevelSpecialValueFor("arrow_min_falloff_stun", (ability:GetLevel() - 1))
+
 	local arrow_bonus_damage = ability:GetLevelSpecialValueFor("arrow_bonus_damage", (ability:GetLevel() - 1))
+	local arrow_min_falloff_bonus_damage = ability:GetLevelSpecialValueFor("arrow_min_falloff_bonus_damage", (ability:GetLevel() - 1))
 
 	-- Stun and damage per distance
 	local stun_per_30 = arrow_max_stun/(arrow_max_stunrange*0.033)
 	local damage_per_30 = arrow_bonus_damage/(arrow_max_damagerange*0.033)
+
+	local stun_falloff_slope = (arrow_min_falloff_stun - arrow_max_stun) / (arrow_max_falloff_stunrange - arrow_min_falloff_stunrange)
 
 	local arrow_stun_duration
 	local arrow_damage
@@ -54,8 +65,12 @@ function ArrowHit( keys )
 	-- Stun
 	if distance < arrow_max_stunrange then
 		arrow_stun_duration = distance*0.033*stun_per_30 + arrow_min_stun
-	else
+	elseif distance < arrow_min_falloff_stunrange then
 		arrow_stun_duration = arrow_max_stun
+	elseif distance < arrow_max_falloff_stunrange then
+		arrow_stun_duration = arrow_max_stun + stun_falloff_slope * (distance - arrow_min_falloff_stunrange)
+	else
+		arrow_stun_duration = arrow_min_falloff_stun
 	end
 
 	-- Damage
@@ -65,7 +80,7 @@ function ArrowHit( keys )
 		arrow_damage = ability_damage + arrow_bonus_damage
 	end
 
-	target:AddNewModifier(caster, nil, "modifier_stunned", {duration = arrow_stun_duration})
+	target:AddNewModifier(caster, ability, "modifier_stunned", {duration = arrow_stun_duration})
 	damage_table.damage = arrow_damage
 	ApplyDamage(damage_table)
 end
