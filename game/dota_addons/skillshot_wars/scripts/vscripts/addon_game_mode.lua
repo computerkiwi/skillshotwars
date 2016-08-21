@@ -66,7 +66,6 @@ function CSkillshotWarsGameMode:InitGameMode()
     GameMode = GameRules:GetGameModeEntity()  
     GameMode:SetFountainPercentageHealthRegen(10)
     GameMode:SetBuybackEnabled(false) 
-	GameMode:SetUseCustomHeroLevels(true)
 	GameMode:SetCustomHeroMaxLevel(1)	
 	GameMode:SetLoseGoldOnDeath(false)
 	--Set which runes are available
