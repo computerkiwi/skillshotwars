@@ -225,3 +225,5 @@ pip-log.txt
 *.vmat_c
 *.vtex_c
 *.bin
+tools_thumbnail_cache.bin
+/game/dota_addons/skillshot_wars/*.bin

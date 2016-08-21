@@ -18,6 +18,8 @@ function sun_strike_charge( keys )
 	local vision_distance = ability:GetLevelSpecialValueFor("vision_distance", ability_level) 
 	local all_heroes = HeroList:GetAllHeroes()
 
+	
+
 	-- Create the vision
 	local duration = delay + vision_duration
 	ability:CreateVisibilityNode(target_location, vision_distance, vision_duration)
@@ -50,6 +52,7 @@ function sun_strike_damage( keys )
 	-- Ability variables
 	local area_of_effect = ability:GetSpecialValueFor("area_of_effect")
 	local damage = ability:GetSpecialValueFor("damage")
+	local impact_particle = keys.impact_particle
 
 	-- Targeting variables
 	local target_teams = ability:GetAbilityTargetTeam()
@@ -70,4 +73,8 @@ function sun_strike_damage( keys )
 		damage_table.victim = hero
 		ApplyDamage(damage_table)
 	end
+
+	--Create impact particle
+	local particle = ParticleManager:CreateParticle(impact_particle, PATTACH_ABSORIGIN, caster)
+	ParticleManager:SetParticleControl(particle, 0, target_location) 
 end
