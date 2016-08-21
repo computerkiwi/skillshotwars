@@ -19,7 +19,7 @@
 	{
 		"override_hero"				"npc_dota_hero_pudge"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
 		"Ability1"					"meat_hook_skill"
@@ -64,7 +64,7 @@
 	{
 		"override_hero"				"npc_dota_hero_rattletrap"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 
 
 		// Abilities
@@ -111,7 +111,7 @@
 	{
 		"override_hero"				"npc_dota_hero_shredder"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 
 
 		// Abilities
@@ -158,7 +158,7 @@
 	{
 		"override_hero"				"npc_dota_hero_mirana"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 
 
 		// Abilities
@@ -205,7 +205,7 @@
 	{
 		"override_hero"				"npc_dota_hero_meepo"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 
 
 		// Abilities
@@ -248,13 +248,13 @@
 		
 	}
 	//=================================================================================================================
-	// HERO: Ogre Magi
+	// HERO: Oravle
 	//=================================================================================================================
 	"npc_dota_hero_oracle_skillshot"
 	{
 		"override_hero"				"npc_dota_hero_oracle"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 
 
 		// Abilities
@@ -303,7 +303,7 @@
 	{
 		"override_hero"				"npc_dota_hero_antimage"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 
 
 		// Abilities
@@ -350,7 +350,7 @@
 	{
 		"override_hero"				"npc_dota_hero_tinker"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 
 
 		// Abilities
@@ -397,7 +397,7 @@
 	{
 		"override_hero"				"npc_dota_hero_invoker"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 		
 		"LoadoutScale"          ".8"
 
@@ -459,7 +459,7 @@
 	{
 		"override_hero"				"npc_dota_hero_storm_spirit"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 
 
 		// Abilities
@@ -505,7 +505,7 @@
 	{
 		"override_hero"				"npc_dota_hero_techies"			// Hero to override
 
-		"StatusHealth"				"145"									// Base health.
+		"StatusHealth"				"100"									// Base health.
 		
 		"LoadoutScale"          ".8"
 
