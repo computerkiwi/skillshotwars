@@ -133,6 +133,7 @@
 							{
 								"ScriptFile"	"abilities/sun_strike_skill.lua"
 								"Function"		"sun_strike_damage"
+								"impact_particle"	"particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
 							}
 						}
 					}
