@@ -77,4 +77,5 @@ function sun_strike_damage( keys )
 	--Create impact particle
 	local particle = ParticleManager:CreateParticle(impact_particle, PATTACH_ABSORIGIN, caster)
 	ParticleManager:SetParticleControl(particle, 0, target_location) 
+	ParticleManager:SetParticleControl(particle, 1, Vector(area_of_effect,0,0))
 end
