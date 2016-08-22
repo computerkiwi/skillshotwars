@@ -226,3 +226,6 @@ pip-log.txt
 *.vtex_c
 *.bin
 /game/dota_addons/skillshot_wars/*.bin
+
+#Avoid leaking stats key
+settings.kv

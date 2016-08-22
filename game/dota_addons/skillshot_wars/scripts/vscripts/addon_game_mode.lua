@@ -1,5 +1,5 @@
 -- Generated from template
-
+require("statcollection/init")
 require("abilities")
 require('lib.timers')
 
