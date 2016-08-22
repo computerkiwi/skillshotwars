@@ -1,14 +1,9 @@
 -- Generated from template
 
 require("abilities")
-require('lib.statcollection')
 require('lib.timers')
 
 winKills = 50
-
-statcollection.addStats({
-	modID = 'cd3297faebbc8ddf3e80e3dd1515a264' --GET THIS FROM http://getdotastats.com/#d2mods__my_mods
-})
 
 
 if CSkillshotWarsGameMode == nil then
@@ -75,11 +70,6 @@ function CSkillshotWarsGameMode:InitGameMode()
 	GameMode:SetRuneEnabled( 3, false ) --Invis
 	GameMode:SetRuneEnabled( 4, false ) --Regen
 	GameMode:SetRuneEnabled( 5, false ) --Bounty
-	
-	
-	
-    GameMode:SetContextThink( "CSkillshotWarsGameMode:GameThink", function() return self:GameThink() end, 0.25 )
-	--GameMode:SetContextThink("CSkillshotWarsGameMode:SetReliableGold",function() return self:SetReliableGold() end,0)
 	
 	
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CSkillshotWarsGameMode, "OnHeroPicked" ), self )
