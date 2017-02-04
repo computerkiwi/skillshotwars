@@ -229,3 +229,6 @@ pip-log.txt
 
 #Avoid leaking stats key
 settings.kv
+/game/dota_addons/skillshot_wars/maps
+/game/dota_addons/skillshot_wars/materials
+/game/dota_addons/skillshot_wars/panorama
