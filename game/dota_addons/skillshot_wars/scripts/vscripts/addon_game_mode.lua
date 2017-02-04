@@ -18,7 +18,7 @@ function Precache( context )
 			PrecacheResource( "particle", "*.vpcf", context )
 			PrecacheResource( "particle_folder", "particles/folder", context )
 	]]
-    	PrecacheResource( "soundfile", "*.vsndevts", context )
+		PrecacheResource( "soundfile", "*.vsndevts", context )
 		PrecacheUnitByNameSync("npc_dota_hero_pudge",context)
 		PrecacheUnitByNameSync("npc_dota_hero_mirana",context)
 		PrecacheUnitByNameSync("npc_dota_hero_rattletrap",context)
@@ -46,8 +46,11 @@ function CSkillshotWarsGameMode:SetReliableGold()
 end
 
 function CSkillshotWarsGameMode:InitGameMode()
-    local GameMode = GameRules:GetGameModeEntity()
+	local GameMode = GameRules:GetGameModeEntity()
 	
+
+	--Turn off strategy time.
+	GameRules:SetStrategyTime(0)
 
 	CSkillshotWarsGameMode.teamDeaths = {}
 	CSkillshotWarsGameMode.teamDeaths[2] = 0
@@ -58,9 +61,9 @@ function CSkillshotWarsGameMode:InitGameMode()
 	GameRules:SetPreGameTime(15)
 	GameRules:SetRuneSpawnTime(30)
 	GameRules:SetGoldPerTick(2)
-    GameMode = GameRules:GetGameModeEntity()  
-    GameMode:SetFountainPercentageHealthRegen(10)
-    GameMode:SetBuybackEnabled(false) 
+	GameMode = GameRules:GetGameModeEntity()  
+	GameMode:SetFountainPercentageHealthRegen(10)
+	GameMode:SetBuybackEnabled(false) 
 	GameMode:SetCustomHeroMaxLevel(1)	
 	GameMode:SetLoseGoldOnDeath(false)
 	--Set which runes are available
@@ -140,16 +143,16 @@ end
 
 
 function CSkillshotWarsGameMode:GameThink()
-    -- Check to see if the game has finished
-    if GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
+	-- Check to see if the game has finished
+	if GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
 		print("1")
-        -- Send stats
-        statcollection.sendStats()
+		-- Send stats
+		statcollection.sendStats()
 
-        -- Delete the thinker
-        return
-    else
-        -- Check again in 1 second
-        return 1
-    end
+		-- Delete the thinker
+		return
+	else
+		-- Check again in 1 second
+		return 1
+	end
 end
