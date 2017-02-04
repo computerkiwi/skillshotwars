@@ -1534,4 +1534,56 @@
 	{
 		"ItemPurchasable"				"0"
 	}
+	"item_recipe_aether_lens"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_aether_lens"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_blight_stone"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_dragon_lance"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_dragon_lance"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_echo_sabre"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_echo_sabre"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_faerie_fire"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_infused_raindrop"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_tome_of_knowledge"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_recipe_iron_talon"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_iron_talon"
+	{
+		"ItemPurchasable"				"0"
+	}
+	"item_wind_lace"
+	{
+		"ItemPurchasable"				"0"
+	}
 }
