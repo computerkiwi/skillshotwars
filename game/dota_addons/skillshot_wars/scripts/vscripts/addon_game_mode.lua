@@ -1,5 +1,4 @@
 -- Generated from template
-require("statcollection/init")
 require("abilities")
 require('lib.timers')
 
@@ -140,19 +139,3 @@ function CSkillshotWarsGameMode:OnThink()
 	return 1
 end
 
-
-
-function CSkillshotWarsGameMode:GameThink()
-	-- Check to see if the game has finished
-	if GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
-		print("1")
-		-- Send stats
-		statcollection.sendStats()
-
-		-- Delete the thinker
-		return
-	else
-		-- Check again in 1 second
-		return 1
-	end
-end
