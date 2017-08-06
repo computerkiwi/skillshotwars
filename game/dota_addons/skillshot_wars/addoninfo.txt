@@ -1,9 +1,13 @@
 "AddonInfo"
 {
-	maps			"skillshot_wars"
+	"maps"			"skillshot_wars skillshot_3v3"
 	"IsPlayable"	"1"
 	"skillshot_wars"
 	{
 					"MaxPlayers"                    "10"
+	}
+	"skillshot_3v3"
+	{
+					"MaxPlayers"                    "6"
 	}
 }
