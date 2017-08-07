@@ -39,7 +39,7 @@ REMOVE_ILLUSIONS_ON_DEATH = false       -- Should we remove all illusions if the
 DISABLE_GOLD_SOUNDS = false             -- Should we disable the gold sound when players get gold?
 
 END_GAME_ON_KILLS = true                -- Should the game end after a certain number of kills?
-KILLS_TO_END_GAME_FOR_TEAM = 50         -- How many kills for a team should signify an end of game?
+--KILLS_TO_END_GAME_FOR_TEAM = 50       -- How many kills for a team should signify an end of game? (Handled in map_settings.lua)
 
 USE_CUSTOM_HERO_LEVELS = true           -- Should we allow heroes to have custom levels?
 MAX_LEVEL = 1                           -- What level should we let heroes get to?
@@ -106,8 +106,9 @@ TEAM_COLORS[DOTA_TEAM_CUSTOM_7] = { 199, 228, 13 }  --    Olive
 TEAM_COLORS[DOTA_TEAM_CUSTOM_8] = { 140, 42, 244 }  --    Purple
 
 
-USE_AUTOMATIC_PLAYERS_PER_TEAM = true   -- Should we set the number of players to 10 / MAX_NUMBER_OF_TEAMS?
+USE_AUTOMATIC_PLAYERS_PER_TEAM = false   -- Should we set the number of players to 10 / MAX_NUMBER_OF_TEAMS?
 
+-- This is handled in map_settings.lua
 CUSTOM_TEAM_PLAYER_COUNT = {}           -- If we're not automatically setting the number of players per team, use this table
 CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_GOODGUYS] = 5
 CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_BADGUYS]  = 5
